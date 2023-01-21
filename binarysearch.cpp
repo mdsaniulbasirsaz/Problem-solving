@@ -28,7 +28,7 @@
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
 
-int binarysearch(ll v[],int n,int target)
+ll binarysearch(ll v[],int n,int target)
 {
     int l=0,h=n-1;
     while(l<=h)
@@ -63,7 +63,7 @@ int main()
   while(t--)
   {
   int target;cin>>target;
-  int index=binarysearch(v,n,target);
+  ll index=binarysearch(v,n,target);
   
   if(target!=-1)
   {

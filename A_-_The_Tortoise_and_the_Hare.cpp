@@ -30,22 +30,15 @@ using namespace std;
 int main()
 {
   my_code
-  int a,b,c,d;
-  cin>>a>>b>>c>>d;
-   int p=a/2;
-  int x=p/b;
-  int y=2*x+d;
-  if(y==(a/c))
-  {
-    cout<<"Tie"<<nl;
-  }
-  else if(y>(a/c))
-  {
-    cout<<"Tortoise"<<nl;
-  }
-  else
-  {
-    cout<<"Hare"<<nl;
-  }
+  int x,a,b,c;cin>>x>>a>>b>>c;
+    if(b*x+a*b*c<a*x){
+        cout<<"Hare"<<endl;
+    }
+    else if(b*x+a*b*c>a*x){
+        cout<<"Tortoise"<<endl;
+    }
+    else{
+        cout<<"Tie"<<endl;
+    }
   The_End;
 }

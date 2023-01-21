@@ -31,11 +31,18 @@ int main()
 {
   my_code
   int n;
-  while(cin>>n){
-  for(int i=2;i<=n;i+=2)
+  cin>>n;
+  set<ll>s;
+  ll x;
+  for(int i=1;i<=n;i++)
   {
-    cout<<i<<"^2 = "<<pow(i,2)<<nl;
+    cin>>x;
+    s.insert(x);
   }
-  }
+  int m=0;
+ for(auto it: s)
+ {
+    m=max(it,m);
+ }
   The_End;
 }
