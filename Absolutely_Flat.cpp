@@ -30,30 +30,18 @@ using namespace std;
 int main()
 {
   my_code
-  int t,k=1;
-  cin>>t;
-  while(t--)
+  int a,b,c,d,e,f;
+  cin>>a>>b>>c>>d>>e;
+  set<int>s;
+  s.insert(a);
+  s.insert(b);
+  s.insert(c);
+  s.insert(d);
+  if(s.size()==1)
   {
-    int n;cin>>n;
-    if(n<=3)
-    {
-        cout<<"Case "<<k++<<": "<<0<<nl;
-    }
-    else
-    {
-        int r = 4;  
-
-    ll numerator = 1, denominator = 1;
-
-    for (int i = 1; i <= r; i++) {
-        numerator *= n - i + 1;
-        denominator *= i;
-    }
-
-    ll nc4 = numerator / denominator;
-    cout<<"Case "<<k++<<": "<<nc4<<nl;
-
-    }
+    cout<<1<<nl;
   }
+  
+  
   The_End;
 }

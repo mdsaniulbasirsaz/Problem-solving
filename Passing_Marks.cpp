@@ -27,33 +27,26 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
-int main()
-{
-  my_code
-  int t,k=1;
-  cin>>t;
-  while(t--)
-  {
-    int n;cin>>n;
-    if(n<=3)
-    {
-        cout<<"Case "<<k++<<": "<<0<<nl;
-    }
-    else
-    {
-        int r = 4;  
+int find_passing_mark(vector<int> scores, int X) {
+    
+    sort(scores.begin(), scores.end(), greater<int>());
+    return scores[X-1];
+}
 
-    ll numerator = 1, denominator = 1;
+int main() {
+    my_code
+    int t;cin>>t;
+    while(t--){
+    int N, X;
+    cin >> N >> X;
 
-    for (int i = 1; i <= r; i++) {
-        numerator *= n - i + 1;
-        denominator *= i;
+    vector<int> scores(N);
+    for (int i = 0; i < N; i++) {
+        cin >> scores[i];
     }
 
-    ll nc4 = numerator / denominator;
-    cout<<"Case "<<k++<<": "<<nc4<<nl;
-
+    int passing_mark = find_passing_mark(scores, X);
+    cout << passing_mark-1<< endl;
     }
-  }
-  The_End;
+    The_End;
 }
