@@ -9,9 +9,15 @@ int main(){
             printf("%d\n",i);
         }
      }
+    }
      else
      {
-        
+        for(int i=b;i<a;i++){
+        if(i%5==2 || i%5==3)
+        {
+            printf("%d\n",i);
+        }
+     }
      }
     return 0;
 }
