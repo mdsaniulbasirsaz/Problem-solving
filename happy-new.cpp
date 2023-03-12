@@ -30,6 +30,6 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  cout<<"Happy New Year"<<endl;
   The_End;
 }

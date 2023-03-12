@@ -30,6 +30,33 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
-  The_End;
+  int n,d;
+  cin>>n>>d;
+  int s[n];
+  for(int i=1;i<=n;i++)
+  {
+    cin>>s[i];
+  }
+  int x=0,y=0,count=0;
+  for(int i=1;i<=n;i++)
+  {
+        if(i%2==0)
+        {
+            x+=s[i];
+            count++;
+        }
+        if(i%2!=0)
+        {
+            y+=s[i];
+        }
+  }
+  int p=x+y-count;
+  if(p==d || p<d)
+  {
+    cout<<"Yes"<<nl;
+  }
+  else
+  {
+    cout<<"No"<<nl;
+  }
 }

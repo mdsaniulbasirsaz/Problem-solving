@@ -27,9 +27,26 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
-int main()
-{
-  my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
-  The_End;
+int find_passing_mark(vector<int> scores, int X) {
+    
+    sort(scores.begin(), scores.end(), greater<int>());
+    return scores[X-1];
+}
+
+int main() {
+    my_code
+    int t;cin>>t;
+    while(t--){
+    int N, X;
+    cin >> N >> X;
+
+    vector<int> scores(N);
+    for (int i = 0; i < N; i++) {
+        cin >> scores[i];
+    }
+
+    int passing_mark = find_passing_mark(scores, X);
+    cout << passing_mark-1<< endl;
+    }
+    The_End;
 }

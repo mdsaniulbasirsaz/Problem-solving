@@ -30,6 +30,12 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int n;
+  while(cin>>n){
+  for(int i=2;i<=n;i+=2)
+  {
+    cout<<i<<"^2 = "<<pow(i,2)<<nl;
+  }
+  }
   The_End;
 }

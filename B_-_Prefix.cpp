@@ -30,6 +30,25 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  string s1,s2;
+  cin>>s1>>s2;
+  int x=s1.size();
+  int y=s2.size();
+  int count=0;
+  for(int i=0;i<x;i++)
+  {
+    if(s1[i]==s2[i])
+    {
+        count++;
+    }
+  }
+  if(x==count)
+  {
+    cout<<"Yes"<<nl;
+  }
+  else
+  {
+    cout<<"No"<<nl;
+  }
   The_End;
 }

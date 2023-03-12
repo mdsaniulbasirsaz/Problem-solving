@@ -30,6 +30,14 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int t,k=1;
+  cin>>t;
+  while(t--)
+  {
+    int n,m;
+    cin>>n>>m;
+   ll s=n/2;
+    cout<<"Case "<<k++<<": "<<s*m<<nl;
+  }
   The_End;
 }

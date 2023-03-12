@@ -30,6 +30,13 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int t;
+  cin>>t;
+  while(t--)
+  {
+  int a,b;
+  cin>>a>>b;
+  cout<<gcd(a,b)<<nl;
+  }
   The_End;
 }

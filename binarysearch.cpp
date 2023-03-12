@@ -27,9 +27,53 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+
+ll binarysearch(ll v[],int n,int target)
+{
+    int l=0,h=n-1;
+    while(l<=h)
+    {
+        int mid=(l+h)/2;
+        if(target==v[mid])
+        {
+            return mid;
+        }
+        else if(target<v[mid])
+        {
+            h=mid-1;
+        }
+        else
+        {
+            l=mid+1;
+        }
+    }
+    return -1;
+}
+
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int n,t;
+  cin>>n>>t;
+  ll v[n];
+  fli(i,0,n)
+  {
+    cin>>v[i];
+  }
+  while(t--)
+  {
+  int target;cin>>target;
+  ll index=binarysearch(v,n,target);
+  
+  if(target!=-1)
+  {
+    cout<<index<<nl;
+  }
+  else
+  {
+    cout<<-1<<nl;
+  }
+  }
+  
   The_End;
 }

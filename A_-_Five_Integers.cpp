@@ -30,6 +30,14 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  set<int>s;
+  int x;
+  fli(i,0,5)
+  {
+    cin>>x;
+    s.insert(x);
+  }
+  int n=s.size();
+  cout<<n<<nl;
   The_End;
 }

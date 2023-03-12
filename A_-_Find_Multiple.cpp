@@ -27,9 +27,23 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+int multiple(int a,int b,int c)
+{
+    for(int i=a;i<=b;i++)
+    {
+        if(i%c==0)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int a,b,c;
+  cin>>a>>b>>c;
+  int result=multiple(a,b,c);
+  cout<<result<<nl;
   The_End;
 }

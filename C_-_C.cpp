@@ -27,9 +27,38 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+int step;
+bool dfs(int n,int m){
+    if(n == m){
+        return true;
+    }
+    for(int i = 2; i <= 3; i ++){
+        if(n * i <= m){
+            n *= i;
+            step ++;
+            if(dfs(n,m)) return true;
+            n /= i;
+            step --;
+        }
+        else return false;
+    }
+    return false;
+}
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+   int n,m;
+    while(scanf("%d%d",&n,&m)!=EOF){
+        step = 0;
+        if(n == m){
+            printf("0\n");
+            continue;
+        }
+        else if(!dfs(n,m)){
+            printf("-1\n");
+            continue;
+        }
+        printf("%d\n",step);
+    }
   The_End;
 }

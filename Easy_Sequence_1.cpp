@@ -27,9 +27,43 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+int compute_F(int X) {
+    if (X == 1) {
+        return 1;
+    } else if (X % 2 == 0) {
+        return compute_F(X / 2) * compute_F(X / 2) + 1;
+    } else {
+        return compute_F(X / 2) * compute_F(X / 2 + 1) + 2;
+    }
+}
+int find_X(int FX) {
+    // Search in the range [1, 10^5] since the sequence grows quickly
+    int left = 1, right = 100000;
+    while (left <= right) {
+        int mid = (left + right) / 2;
+        if (compute_F(mid) == FX) {
+            return mid;
+        } else if (compute_F(mid) < FX) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+}
+
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+   // Read the number of test cases
+    int T;
+    cin >> T;
+
+    // Process each test case
+    for (int i = 0; i < T; i++) {
+        int FX;
+        cin >> FX;
+        int X = find_X(FX);
+        cout << X << endl;
+    }
   The_End;
 }

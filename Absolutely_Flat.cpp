@@ -30,6 +30,18 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int a,b,c,d,e,f;
+  cin>>a>>b>>c>>d>>e;
+  set<int>s;
+  s.insert(a);
+  s.insert(b);
+  s.insert(c);
+  s.insert(d);
+  if(s.size()==1)
+  {
+    cout<<1<<nl;
+  }
+  
+  
   The_End;
 }

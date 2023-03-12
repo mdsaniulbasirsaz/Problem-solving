@@ -30,6 +30,19 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int n;
+  cin>>n;
+  set<ll>s;
+  ll x;
+  for(int i=1;i<=n;i++)
+  {
+    cin>>x;
+    s.insert(x);
+  }
+  int m=0;
+ for(auto it: s)
+ {
+    m=max(it,m);
+ }
   The_End;
 }

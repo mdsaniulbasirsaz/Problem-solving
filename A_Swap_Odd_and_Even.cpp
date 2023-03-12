@@ -30,6 +30,13 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  string str;
+  cin>>str;
+  int n=str.length();
+  for(int i=0;i<n;i+=2)
+  {
+        swap(str[i],str[i+1]);
+  }
+  cout<<str<<endl;
   The_End;
 }

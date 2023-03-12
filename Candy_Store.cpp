@@ -30,6 +30,16 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int t;cin>>t;
+  while(t--)
+  {
+    int x,y,a=0;
+    cin>>x>>y;
+    int b=(y-x)*2;
+    if(y>x){ a+=x; a+=b;
+    }
+    else{  a+=y;
+    }cout<<a<<nl;
+  }
   The_End;
 }

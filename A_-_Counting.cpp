@@ -30,6 +30,19 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int a,b;
+  cin>>a>>b;
+  if(a>b)
+  {
+    cout<<"0"<<nl;
+  }
+  else if(a==b)
+  {
+    cout<<"1"<<nl;
+  }
+  else
+  {
+    cout<<b-a+1<<nl;
+  }
   The_End;
 }

@@ -30,6 +30,32 @@ using namespace std;
 int main()
 {
   my_code
-  cout<<"Md Saniul Basir Saz"<<nl;
+  int n;
+    cin >> n;  // take input n
+
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];  // take input a
+    }
+
+    vector<bool> called(n, false);  // initialize called vector to false
+
+    // call out IDs according to a
+    for (int i = 0; i < n; i++) {
+        int ai = a[i] - 1;  // 0-indexed
+        if (!called[ai]) {
+            cout << ai+1 << endl;
+            called[ai] = true;
+        }
+    }
+
+    // print the remaining uncalled IDs
+    for (int i = 0; i < n; i++) {
+        if (!called[i]) {
+            cout << i+1 << endl;
+        }
+    }
+
+
   The_End;
 }
