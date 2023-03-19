@@ -4,6 +4,12 @@
 			"path": "."
 		},
 		{
+<<<<<<< HEAD
+			"path": "../../../Topics Practice"
+		}
+	],
+	"settings": {}
+=======
 			"path": "../../Java OOP"
 		}
 	],
@@ -12,4 +18,5 @@
 			"iostream": "cpp"
 		}
 	}
+>>>>>>> 160febfe7ca41f2bb3c2679df23eaf0254a75d6f
 }
