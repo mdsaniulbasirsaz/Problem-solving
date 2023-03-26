@@ -31,14 +31,10 @@ int main()
 {
   my_code
   ll n;cin>>n;
-  if(n%2==0 && n>2)
-  {
-    
-        YSSS;
+  ll sum=0;
+  for(int i=1;i<=n;i++){
+    sum+=i;
   }
-  else
-  {
-    NOOO;
-  }
+  cout<<sum<<nl;
   The_End;
 }

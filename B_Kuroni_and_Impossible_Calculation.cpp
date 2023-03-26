@@ -39,6 +39,7 @@ int main()
   }
   ll value=1;
   if(n>a)value=0;
+  else{
   for(ll i=0;i<n;i++)
   {
     for(ll j=0;j<i;j++)
@@ -47,6 +48,7 @@ int main()
         value%=a;
     }
      
+  }
   }
   cout<<value<<nl;
   The_End;

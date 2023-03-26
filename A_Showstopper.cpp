@@ -30,15 +30,36 @@ using namespace std;
 int main()
 {
   my_code
-  ll n;cin>>n;
-  if(n%2==0 && n>2)
-  {
-    
-        YSSS;
-  }
-  else
-  {
+  int t;
+cin >> t;
+while (t--) {
+int n;
+cin >> n;
+int a[n], b[n];
+for (int i = 0; i < n; i++) {
+cin >> a[i];
+}
+for (int i = 0; i < n; i++) {
+cin >> b[i];
+}
+bool find=true;
+for(int i=0;i<n-1;i++) {
+    if((a[i]<=a[n-1]&& b[i]<=b[n-1]) || (b[i]<=a[n-1]&& a[i]<=b[n-1])){
+        continue;
+    }
+    else
+    {
+        find=false;
+        break;
+    }
+}
+if(find){
+    YSSS;
+}
+else
+{
     NOOO;
-  }
+}
+}
   The_End;
 }

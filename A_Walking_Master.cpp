@@ -30,13 +30,13 @@ using namespace std;
 void mdsaniulbasirsaz()
 {
     ll a,b,c,d,ans,sum;cin>>a>>b>>c>>d;
+    sum=d+a-b;
+    ans=(d-b)+abs(sum-c);
     if(b>d)
     {
         cout<<-1<<nl;
         return;
     }
-    sum=d+a-b;
-    ans=(d-b)+abs(sum-c);
     if(sum<c)
     {
         cout<<-1<<nl;
@@ -51,8 +51,6 @@ int main()
   while(t--)
   {
     mdsaniulbasirsaz();
-    
-    
 
   }
   The_End;

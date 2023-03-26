@@ -30,15 +30,22 @@ using namespace std;
 int main()
 {
   my_code
-  ll n;cin>>n;
-  if(n%2==0 && n>2)
-  {
-    
-        YSSS;
-  }
-  else
-  {
-    NOOO;
+  int t;cin>>t;
+  while(t--){
+    int n;cin>>n;
+    int arr[n];
+    fli(i,0,n)cin>>arr[i];
+
+    ll m=*min_element(arr,arr+n);
+    ll count=0;
+    fli(i,0,n)
+    {
+        if(arr[i]>m)
+        {
+            count++;
+        }
+    }
+    cout<<count<<nl;
   }
   The_End;
 }

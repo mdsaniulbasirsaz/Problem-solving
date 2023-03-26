@@ -27,18 +27,42 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+void mdsaniulbasirsaz(){
+    string str;cin>>str;
+    map<char,ll>v;
+    for(auto n:str)
+    {
+        v[n]++;
+    }
+    ll size=v.size();
+    if(size==4 || size==3)
+    {
+        cout<<4<<nl;
+    }
+    else if(size==1)
+    {
+        cout<<-1<<nl;
+    }
+    else
+    {
+        for(auto n: v)
+        {
+            if(n.second==3)
+            {
+                cout<<6<<nl;
+                return;
+            }
+        }
+        cout<<4<<nl;
+    }
+}
 int main()
 {
   my_code
-  ll n;cin>>n;
-  if(n%2==0 && n>2)
+  int t;cin>>t;
+  while(t--)
   {
-    
-        YSSS;
-  }
-  else
-  {
-    NOOO;
+    mdsaniulbasirsaz();
   }
   The_End;
 }

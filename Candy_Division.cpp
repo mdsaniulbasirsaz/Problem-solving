@@ -30,15 +30,21 @@ using namespace std;
 int main()
 {
   my_code
-  ll n;cin>>n;
-  if(n%2==0 && n>2)
-  {
-    
+  int t;cin>>t;
+  while(t--){
+    int n;cin>>n;
+    if(n<3)
+    {
+        NOOO;
+    }
+    else if(n%3==0)
+    {
         YSSS;
-  }
-  else
-  {
-    NOOO;
+    }
+    else
+    {
+        NOOO;
+    }
   }
   The_End;
 }

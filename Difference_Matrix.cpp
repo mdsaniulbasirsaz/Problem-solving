@@ -27,45 +27,49 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
-void printlargest(int arr[],int n)
-{
-    int first, second , third;
-    if(n<3)
-    {
-        cout<<"Invalid"<<endl;
-        return ;
-    }
-    third=first=second=INT_MIN;
-    for(int i=0;i<n;i++)
-    {
-        //If current element is greater than first
-        if(arr[i]>first)
-        {
-            third=second;
-            second=first;
-            first=arr[i];
-        }
-        //If arr[i] is in between first and second then update second
-        else if(arr[i]>second && arr[i]!=first)
-        {
-            third=second;
-            second=arr[i];
+
+const int MAXN = 500;
+int mat[MAXN][MAXN];
+
+void fill(int n, int num) {
+    int i = 0, j = 0;
+    while (num <= n * n) {
+        mat[i][j] = num++;
+        if ((i + j) % 2 == 0) {
+            if (j == n - 1)
+                i++;
+            else if (i == 0)
+                j++;
+            else {
+                i--;
+                j++;
+            }
+        } else {
+            if (i == n - 1)
+                j++;
+            else if (j == 0)
+                i++;
+            else {
+                i++;
+                j--;
+            }
         }
     }
 }
-int main()
-{
-  my_code
-  int t;cin>>t;
-  while(t--)
-  {
-    int n;cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        fill(n, 1);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                cout << mat[i][j] << " ";
+            }
+            cout << endl;
+        }
     }
-    printlargest(arr,n);
-  }
-  The_End;
+    return 0;
 }
