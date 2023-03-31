@@ -30,27 +30,24 @@ using namespace std;
 int main()
 {
   my_code
-  int n,m;cin>>n>>m;
-  int arr[n][m];
-  for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
+  long long n;
+    cin >> n;
+    int count = 0;
+    while (n != 0)
     {
-        cin>>arr[i][j];
-    }
-  }
-  int sum=0;
-   for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
-    {
-        if(arr[i][j]==0)
+        if (n % 10 == 4 || n % 10 == 7)
         {
-            sum++;
+            count += 1;
         }
+        n /= 10;
     }
-  }
-  cout<<sum<<endl;
-
+    if (count == 4 || count == 7)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
   The_End;
 }

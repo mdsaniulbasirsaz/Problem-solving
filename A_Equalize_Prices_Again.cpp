@@ -30,27 +30,18 @@ using namespace std;
 int main()
 {
   my_code
-  int n,m;cin>>n>>m;
-  int arr[n][m];
-  for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
+  int t;cin>>t;
+  while(t--) {
+    ll n;cin>>n;
+    ll sum=0;
+    for(int i=0,x;i<n;i++)
     {
-        cin>>arr[i][j];
-    }
-  }
-  int sum=0;
-   for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
-    {
-        if(arr[i][j]==0)
-        {
-            sum++;
-        }
-    }
-  }
-  cout<<sum<<endl;
+        cin>>x;sum+=x;
 
+    }
+    sum=ceil((double)sum/n);
+    cout<<sum<<nl;
+
+  }
   The_End;
 }

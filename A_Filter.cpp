@@ -30,27 +30,21 @@ using namespace std;
 int main()
 {
   my_code
-  int n,m;cin>>n>>m;
-  int arr[n][m];
-  for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
+  int n;cin>>n;
+  vector<int>v;
+  vector<int>ans;
+  for(int i=0;i<n;i++){
+    int x;cin>>x;
+    v.push_back(x);
+    if(v[i]%2==0)
     {
-        cin>>arr[i][j];
+        ans.push_back(v[i]);
     }
   }
-  int sum=0;
-   for(int i=0;i<n;i++)
-  {
-    for(int j=0;j<m;j++)
-    {
-        if(arr[i][j]==0)
-        {
-            sum++;
-        }
-    }
+  for(int i=0;i<ans.size();i++){
+    cout<<ans[i]<<" ";
   }
-  cout<<sum<<endl;
+  cout<<"\n";
 
   The_End;
 }
