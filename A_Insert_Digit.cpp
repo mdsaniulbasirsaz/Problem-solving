@@ -31,48 +31,31 @@ int main()
 {
   my_code
   int t;cin>>t;
-
   while(t--){
-    ll n;cin>>n;
-    ll c=40;
-    if(n%2==0){
-        cout<<-1<<"\n";
+    int n,d;cin>>n>>d;
+    string str;cin>>str;
+    int a=-1;
+    string s;
+    fli(i,0,n)
+    {
+        if(d>str[i]-'0'){
+            s+='0'+d;
+            a=i;break;
+        }
+        s+=str[i];
+    }
+    if(a==-1)
+    {
+        s+='0'+d;
     }
     else
+  {
+    for(int i=a;i<n;i++)
     {
-        ll c=40;
-        
-        vector<ll>a;
-        while(n!=1 && c--){
-            if(((n+1)/2)%2)
-            {
-                n=(n+1);
-                n/=2;
-                a.push_back(1);
-            }
-            else
-            {
-                n=(n-1);
-                n/=2;
-                a.push_back(2);
-            }
-        }
-        if(c<0){
-            cout<<-1<<"\n";
-        }
-        else if(n==1)
-        {
-            cout<<a.size()<<"\n";
-             reverse(a.begin(),a.end());
-        for(auto i:a)cout<<i<<" ";
-        cout<<"\n";
-        }
-     else
-    {
-        cout<<-1<<"\n";
-    }  
+        s+=str[i];
     }
-
+  }
+  cout<<s<<"\n";
   }
   The_End;
 }

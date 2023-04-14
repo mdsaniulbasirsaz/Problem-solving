@@ -41,7 +41,7 @@ int main()
         a=0;
         flj(j,0,n)
         {
-            a^=arr[j]^i;
+            a=a^(arr[j]^i);
         }
         if(a==0){
             cout<<i<<"\n";

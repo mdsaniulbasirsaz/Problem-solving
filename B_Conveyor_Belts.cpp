@@ -31,48 +31,23 @@ int main()
 {
   my_code
   int t;cin>>t;
+  while(t--)
+  {
+    ll n,x1,y1,x2,y2;cin>>n>>x1>>y1>>x2>>y2;
+    x1--;
+    y1--;
+    x2--;y2--;
+    ll a=min(x1,n-x1-1);
+    ll b=min(y1,n-y1-1);
 
-  while(t--){
-    ll n;cin>>n;
-    ll c=40;
-    if(n%2==0){
-        cout<<-1<<"\n";
-    }
-    else
-    {
-        ll c=40;
-        
-        vector<ll>a;
-        while(n!=1 && c--){
-            if(((n+1)/2)%2)
-            {
-                n=(n+1);
-                n/=2;
-                a.push_back(1);
-            }
-            else
-            {
-                n=(n-1);
-                n/=2;
-                a.push_back(2);
-            }
-        }
-        if(c<0){
-            cout<<-1<<"\n";
-        }
-        else if(n==1)
-        {
-            cout<<a.size()<<"\n";
-             reverse(a.begin(),a.end());
-        for(auto i:a)cout<<i<<" ";
-        cout<<"\n";
-        }
-     else
-    {
-        cout<<-1<<"\n";
-    }  
-    }
+    ll ans1=min(a,b);
 
+    ll c=min(x2,n-x2-1);
+    ll d=min(y2,n-y2-1);
+
+    ll ans2=min(c,d);
+
+    cout<<abs(ans1-ans2)<<"\n";
   }
   The_End;
 }

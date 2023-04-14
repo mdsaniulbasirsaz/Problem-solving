@@ -27,52 +27,28 @@
 #define st(n) fixed<<setprecision(n)
 #define my_code ios_base::sync_with_stdio(0);cout.tie(0);
 using namespace std;
+void mdsaniulbasirsaz(){
+    ll a,b;cin>>a>>b;
+    ll ans = 1e10;
+    ll r,d,e;
+    
+    for(int i=1;i<=1e5;i++)
+    {
+        r=i-1;
+        d=a/i+(a%i!=0);
+        e=b/i+(b%i!=0);
+        ll m=r+d+e;
+        ans=min(ans,m);
+    }
+    cout<<ans<<"\n";
+}
 int main()
 {
   my_code
   int t;cin>>t;
-
   while(t--){
-    ll n;cin>>n;
-    ll c=40;
-    if(n%2==0){
-        cout<<-1<<"\n";
-    }
-    else
-    {
-        ll c=40;
-        
-        vector<ll>a;
-        while(n!=1 && c--){
-            if(((n+1)/2)%2)
-            {
-                n=(n+1);
-                n/=2;
-                a.push_back(1);
-            }
-            else
-            {
-                n=(n-1);
-                n/=2;
-                a.push_back(2);
-            }
-        }
-        if(c<0){
-            cout<<-1<<"\n";
-        }
-        else if(n==1)
-        {
-            cout<<a.size()<<"\n";
-             reverse(a.begin(),a.end());
-        for(auto i:a)cout<<i<<" ";
-        cout<<"\n";
-        }
-     else
-    {
-        cout<<-1<<"\n";
-    }  
-    }
-
+    mdsaniulbasirsaz();
+    
   }
   The_End;
 }

@@ -30,49 +30,20 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin>>t;
-
-  while(t--){
-    ll n;cin>>n;
-    ll c=40;
-    if(n%2==0){
-        cout<<-1<<"\n";
-    }
-    else
-    {
-        ll c=40;
-        
-        vector<ll>a;
-        while(n!=1 && c--){
-            if(((n+1)/2)%2)
-            {
-                n=(n+1);
-                n/=2;
-                a.push_back(1);
-            }
-            else
-            {
-                n=(n-1);
-                n/=2;
-                a.push_back(2);
-            }
-        }
-        if(c<0){
-            cout<<-1<<"\n";
-        }
-        else if(n==1)
-        {
-            cout<<a.size()<<"\n";
-             reverse(a.begin(),a.end());
-        for(auto i:a)cout<<i<<" ";
-        cout<<"\n";
-        }
-     else
-    {
-        cout<<-1<<"\n";
-    }  
-    }
-
+  ll n;cin>>n;
+  ll sum=0;
+  while(n!=0){
+    ll r=n%10;
+    sum+=r;
+    n/=10;
+  }
+  if(n%sum==0)
+  {
+    cout<<"Yes"<<"\n";
+  }
+  else
+  {
+    cout<<"No"<<"\n";
   }
   The_End;
 }
