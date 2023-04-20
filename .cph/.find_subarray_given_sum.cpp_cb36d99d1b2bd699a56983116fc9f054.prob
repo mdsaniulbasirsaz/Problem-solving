@@ -1,0 +1,1 @@
+{"name":"Local: find_subarray_given_sum","url":"d:\\Problems Solve\\Problem-solving\\find_subarray_given_sum.cpp","tests":[{"id":1681567257769,"input":"1\n8\n15 2 4 8 9 5 10 23\n23","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Problems Solve\\Problem-solving\\find_subarray_given_sum.cpp","group":"local","local":true}
