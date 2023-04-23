@@ -30,19 +30,8 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
-    }
+  int a,b;
+  cin>>a>>b;
+  cout<<(a*b)/100.0<<nl;
   The_End;
 }

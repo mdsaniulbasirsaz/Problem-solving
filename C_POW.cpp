@@ -30,19 +30,45 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
-    }
+  ll a,b,c;
+    cin >> a >> b >> c;
+     if (c%2 ==1)
+     {
+     	if (a >b)
+     	{
+     		cout <<">";
+     		return 0;
+     	}else if (a <b)
+     	{
+     		cout << "<";
+     		return 0;
+     	}else{
+     		cout << "=";
+     		return 0;
+     	}
+     }else if (c != 0)
+     {
+     	if (a < 0)
+     	{
+     		a = -a;
+     	}if (b < 0)
+     	{
+     		b = -b;
+     	}
+     	if (a >b)
+     	{
+     		cout <<">";
+     		return 0;
+     	}else if (a <b)
+     	{
+     		cout << "<";
+     		return 0;
+     	}else{
+     		cout << "=";
+     		return 0;
+     	}
+     }else{
+     	cout << "=";
+     }
   The_End;
 }

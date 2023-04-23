@@ -3,7 +3,8 @@
    Jashore University Of Scinece and Technology 
    Student Id: 200103 
    Email: saniul.cse.just@gmail.com
-   Mobile: 01306032236 */
+   Mobile: 01306032236 
+*/
 #include<iostream>
 #include<cmath>
 #include<algorithm>
@@ -30,19 +31,27 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
+  string s1,s2;
+  sort(s1.begin(),s1.end());
+  sort(s2.begin(),s2.end());
+  int x=0;
+  for(int i=0;i<=s1.length();i++)
+  {
+    if(s1[i]!=s2[i])
+    {
+        x=1;
+        break;
     }
+  }
+  if(x==0)
+  {
+    cout<<"Yes"<<"\n";
+  }
+  else
+  {
+    cout<<"No"<<"\n";
+  }
+
+
   The_End;
 }

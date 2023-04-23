@@ -1,4 +1,4 @@
-/* Md Saniul Basir Saz 
+#/* Md Saniul Basir Saz 
    Department Of Computer Science and Engineering 
    Jashore University Of Scinece and Technology 
    Student Id: 200103 
@@ -30,19 +30,28 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
+  ll n;
+  cin>>n;
+  ll a=0,b=1,fib;
+  if(n==1)
+  {
+    cout<<a<<"\n";
+  }
+  else if(n==2)
+  {
+    cout<<b<<"\n";
+  }
+  else{
+    ll sum=0;
+    for(int i=3;i<=n+1;i++)
+    {
+        fib=a+b;
+        a=b;
+        b=fib;
+
     }
+    cout<<fib<<"\n";
+  }
+  // 0 1 1 2 3 5
   The_End;
 }

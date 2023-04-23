@@ -30,19 +30,26 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
+  int x,y;
+  cin>>x>>y;
+  if(x==y)
+  {
+    cout<<x<<"\n";
+  }
+  else
+  {
+    if(x==0 && y==1 ||  x==1 && y==0 )
+    {
+        cout<<"2"<<"\n";
     }
+    else if(x==1 && y==2 || x==2 && y==1)
+    {
+        cout<<"0"<<"\n";
+    }
+    else
+    {
+        cout<<"1"<<"\n";
+    }
+  }
   The_End;
 }

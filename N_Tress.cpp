@@ -30,19 +30,17 @@ using namespace std;
 int main()
 {
   my_code
-  int t;cin >> t;
-    while (t--) {
-        int n;cin >> n;
-        int t = 0;
-        while (n != 50) {
-            if (n < 50) {
-                n += 2;
-            } else {
-                n -= 3;
-            }
-            t++;
-        }
-        cout << t << "\n";
+  int n;cin>>n;
+  vector<int>v;
+  long long sum=0;
+  for(int i=0,x;i<n;i++) {
+    cin>>x;
+    v.push_back(x);
+    if(v[i]>10)
+    {
+        sum+=v[i]-10;
     }
+  }
+  cout<<sum<<"\n";
   The_End;
 }
