@@ -30,14 +30,30 @@ using namespace std;
 int main()
 {
   my_code
-  int a,b,c;cin>>a>>b>>c;
-  if(a>c && c<b)
+  int t;cin>>t;
+  while(t--)
   {
-    cout<<"Yes"<<"\n";
-  }
-  else
-  {
-    cout<<"No"<<"\n";
+    int n;
+    cin>>n;
+    vector<ll>v1,v2;
+    fli(i,0,n)
+    {
+        int x;cin>>x;
+        v.push_back(x);
+    }
+    cin>>n;
+    fli(i,0,n){
+        int x;cin>>x;
+        v2.push_back(x);
+    }
+
+    vector<pair<ll,ll>>s;
+    for(int i=0;i<n;i++){
+        v.push_back(make_pair(v1[i],v2[i]));
+    }
+    
+
+
   }
   The_End;
 }

@@ -30,14 +30,13 @@ using namespace std;
 int main()
 {
   my_code
-  int a,b,c;cin>>a>>b>>c;
-  if(a>c && c<b)
-  {
-    cout<<"Yes"<<"\n";
-  }
-  else
-  {
-    cout<<"No"<<"\n";
+  ll a,b;
+  
+  cin>>a>>b;
+  if(a>=1 && b>=1){
+  ll c=pow(a,b);
+  ll d=pow(b,a);
+  cout<<c-d<<"\n";
   }
   The_End;
 }
