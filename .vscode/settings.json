@@ -3,7 +3,10 @@
         "iostream": "cpp",
         "iomanip": "cpp",
         "bitset": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "random": "cpp",
+        "cmath": "cpp"
     },
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "cph.general.onceMaintainerMessage": false
 }
